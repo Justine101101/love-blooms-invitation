@@ -14,9 +14,12 @@ const ACTIVITIES = [
   { id: "chowking", label: "Chowking Date", emoji: "🥡" },
   { id: "coffee", label: "Coffee Date", emoji: "☕" },
   { id: "cinema", label: "Cinema Date", emoji: "🎬" },
+<<<<<<< HEAD
   { id: "icecream", label: "Ice Cream Date", emoji: "🍦" },
   { id: "arcade", label: "Arcade Date", emoji: "🎮" },
   { id: "mall", label: "Mall Stroll Date", emoji: "🛍️" },
+=======
+>>>>>>> 68eb5a3eb49ba1310e924daa2f08367f7822f868
 ] as const;
 
 type Stage = "hero" | "proposal" | "celebrate";
@@ -130,7 +133,11 @@ export function LoveLetter() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-romantic font-display text-6xl sm:text-7xl md:text-8xl font-bold leading-tight"
             >
+<<<<<<< HEAD
               Hi Kat, My Baby ❤️
+=======
+              Hi Love ❤️
+>>>>>>> 68eb5a3eb49ba1310e924daa2f08367f7822f868
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
