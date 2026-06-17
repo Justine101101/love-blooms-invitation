@@ -16,7 +16,7 @@ const ACTIVITIES = [
   { id: "cinema", label: "Cinema Date", emoji: "🎬" },
   { id: "icecream", label: "Ice Cream Date", emoji: "🍦" },
   { id: "arcade", label: "Arcade Date", emoji: "🎮" },
-  { id: "mall", label: "Mall Stroll Date", emoji: "🛍️" },
+  { id: "sushi", label: "Sushi Date", emoji: "🍣" },
 ] as const;
 
 type Stage = "hero" | "proposal" | "celebrate";
@@ -40,7 +40,7 @@ export function LoveLetter() {
 
   useEffect(() => {
     if (stage === "proposal") {
-      setTimeout(() => proposalRef.current?.scrollIntoView({ behavior: "smooth" }), 300);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [stage]);
 
