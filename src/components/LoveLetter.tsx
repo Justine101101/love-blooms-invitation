@@ -27,7 +27,6 @@ export function LoveLetter() {
   const [date, setDate] = useState<Date | undefined>();
   const [validationMsg, setValidationMsg] = useState<string | null>(null);
   const [noPos, setNoPos] = useState({ x: 0, y: 0 });
-  const proposalRef = useRef<HTMLDivElement>(null);
   const dateRef = useRef<HTMLDivElement>(null);
 
   const today = useMemo(() => {
@@ -40,7 +39,9 @@ export function LoveLetter() {
 
   useEffect(() => {
     if (stage === "proposal") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 100);
     }
   }, [stage]);
 
@@ -160,11 +161,10 @@ export function LoveLetter() {
       {/* PROPOSAL */}
       {stage === "proposal" && (
         <motion.section
-          ref={proposalRef}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 px-4 sm:px-6 py-16 sm:py-24 max-w-5xl mx-auto"
+          className="relative z-10 px-4 sm:px-6 pt-8 sm:pt-12 pb-16 sm:py-24 max-w-5xl mx-auto"
         >
           <div className="text-center">
             <motion.div
